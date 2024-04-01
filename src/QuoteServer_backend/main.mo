@@ -21,7 +21,7 @@ actor QuoteServer {
         if (Array.size(quotes) == 0) {
             return null;
         };
-        // Generate a random index to select a quote from the array. The `Random.randNat` function is used here, requiring a natural number as the maximum value.
+        // Generate a random index to select a quote from the array.
         let blob = await Random.blob();
         let hugeNumber = Random.rangeFrom(32, blob);
         let index = hugeNumber % Array.size(quotes);
